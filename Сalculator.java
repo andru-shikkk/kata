@@ -44,9 +44,7 @@ public class Сalculator {
             throw new Exception("числа должны быть не больше 10");
         }
         int arabian = calc(num1, num2, oper);
-        if (arabian == 101){
-            throw new Exception("калькулятор умеет работать только с целыми числами");
-        }
+
         if (isRoman) {
             if (arabian <= 0) {
                 throw new Exception("в римской системе нет отрицательных чисел");
@@ -72,10 +70,7 @@ public class Сalculator {
         if (oper.equals("+")) return a + b;
         else if (oper.equals("-")) return a - b;
         else if (oper.equals("*")) return a * b;
-        else {
-            if (a % b == 0) return a / b;
-            else return 101;
-        }
+        else return  a / b;
     }
 }
 
